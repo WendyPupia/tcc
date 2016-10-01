@@ -32,6 +32,7 @@ if (isset($_POST['btn-save'])) {
 		} catch (PDOException $e) {
 			die($e->getMessage());
 		}
+
 	}
 }
 
@@ -49,6 +50,7 @@ if (isset($_POST['btn-cancel1'])) {
 </head>
 <body>
 <center>
+
 	<div id="header">
 		<div id="content">
 			<label id="titulo">ADICIONAR NOVO PRODUTO NA BASE DE DADOS</label>

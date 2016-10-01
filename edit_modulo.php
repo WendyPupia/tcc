@@ -22,9 +22,10 @@ if (isset($_POST['btn-update'])) {
 		$sql_query = "UPDATE modulo SET Ip_Modulo='$CodigoModulo' WHERE id_Modulo=$i";
 		$prepStm = $connection->prepare($sql_query);
 	} catch (PDOException $e) {
-		die($e);
+		die($e->getMessage());
 	}
-	if ($prepStm->execute()) {
+
+	if ($prepStm->execute() > 0) {
 		?>
 		<script type="text/javascript">
 			alert('Dados atualizados com sucesso!');

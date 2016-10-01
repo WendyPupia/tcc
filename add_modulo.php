@@ -15,8 +15,7 @@ if (isset($_POST['btn-save'])) {
 		<?php
 	} else {
 		try {
-			$sql_query = "INSERT INTO modulo (Ip_Modulo,Status_Modulo)VALUES('$CodigoModulo', 'Inativo')";
-			//$prepStm = $connection->query($sql_query);
+			$sql_query = "INSERT INTO Modulo (Ip_Modulo,Status_Modulo)VALUES('$CodigoModulo', 'Inativo')";
 			$prepStm = $connection->prepare($sql_query);
 			$rowsAffected = $prepStm->execute();
 			if ($rowsAffected < 0) {
